@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <script type="text/javascript"
+          src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HBaIdMFthcpTXQzmiV0NSVzQpAMSkIRSaF0fXxNIalT8Xi9f1BbqLRvPGcXuzLunNzPN-HEvc5h0OaMFuHTBK_-kLjZf8YfP5Kpsh-bDPRE"
+          charset="UTF-8"></script>
+     <script type="text/javascript"
+          src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=q4_fBr5dC1xRMlBlNpT_DvmBEpTc_7Aw1Oonpwhf4bce7wlUp4GkXK6JlRx0aP0P1JjmYBaVZOQ0x7MDBDaztgCpnQD-MS-ylPicOPp22mY"
+          charset="UTF-8"></script>
+     <title>sample1</title>
+     <style>
+          .row {
+               display: flex;
+               flex-wrap: nowrap;
+          }
+
+          .column {
+               flex: 50%;
+               padding: 10px;
+               text-align: left;
+          }
+
+          p {
+               word-wrap: break-word;
+               text-indent: -20px;
+               padding-left: 20px;
+          }
+
+          .tab1 {
+               word-wrap: break-word;
+               padding-left: 20px;
+          }
+
+          .tab2 {
+               word-wrap: break-word;
+               padding-left: 40px;
+          }
+
+          footer {
+               margin-top: 50px;
+               border-top: 1px solid silver;
+               font-size: 0.8em;
+          }
+
+          footer ol {
+               padding-left: 20px;
+          }
+
+          /** * Initialiazing a `footnotes` counter on the wrapper */
+          article {
+               counter-reset: footnotes;
+          }
+
+          /** * Inline footnotes references * 1. Increment the counter at each new reference * 2. Reset link styles to make it appear like regular text */
+          [aria-describedby="footnote-label"] {
+               counter-increment: footnotes;
+               /* 1 */
+               text-decoration: none;
+               /* 2 */
+               color: inherit;
+               /* 2 */
+               cursor: default;
+               /* 2 */
+               outline: none;
+               /* 2 */
+          }
+
+          /** * Actual numbered references * 1. Display the current state of the counter (e.g. `[1]`) * 2. Align text as superscript * 3. Make the number smaller (since it's superscript) * 4. Slightly offset the number from the text * 5. Reset link styles on the number to show it's usable */
+          [aria-describedby="footnote-label"]::after {
+               content: '[' counter(footnotes) ']';
+               /* 1 */
+               vertical-align: auto;
+               /* 2 */
+               font-size: 1em;
+               /* 3 */
+               margin-left: 2px;
+               /* 4 */
+               color: blue;
+               /* 5 */
+               text-decoration: underline;
+               /* 5 */
+               cursor: pointer;
+               /* 5 */
+               -webkit-user-select: text;
+               -moz-user-select: text;
+               -ms-user-select: text;
+               user-select: text;
+          }
+
+          [aria-describedby="footnote-label"]::after {
+               -webkit-user-select: text;
+               -moz-user-select: text;
+               -ms-user-select: text;
+               user-select: text;
+          }
+
+          /** * Resetting the default focused styles on the number */
+          [aria-describedby="footnote-label"]:focus::after {
+               outline: thin dotted;
+               outline-offset: 2px;
+               color: brown;
+               font-weight: bold;
+          }
+
+          [aria-label="Back to content"] {
+               font-size: 1em;
+               color: darkblue;
+          }
+
+          /** * Highlight target note */
+          footer :target {
+               background: lightgrey;
+          }
+
+          /** * Visually hidden yet accessible content */
+          .p {
+               color: brown;
+               font-style: italic;
+          }
+
+          #developedby {
+               font-style: italic;
+               color: brown;
+          }
+
+          /* Style for the link container */
+          .link-container {
+               position: fixed;
+               bottom: 50%;
+               left: 0;
+               right: 0;
+               text-align: bottom;
+          }
+
+          /* Style for the links */
+          .link-container a {
+               color: rgba(255, 38, 0, 0.971);
+               text-decoration: none;
+               display: inline-block;
+               margin-right: 20px;
+               font-size: larger;
+          }
+     </style>
+</head>
+
+<body> <BR>
+     <center>श्रीसरस्वत्यै नमः <a id="TOP"></a></center><BR><BR> <a
+          href="https://shivaprasadacharya.github.io/sample1.git.io/" target="_blank">Double Column</a>
+     <div class="hyperlink">
+          <h2 id="">Content</h2>
+          <h3></h3>
+          <div class="row">
+               <div class="column" style="background-color:#bbb;">
+                    <p><a href="#ZA1">A1</a></p>
+                    <p><a href="#ZB2">B2</a></p>
+                    <p><a href="#ZC3">C3</a></p>
+                    <p><a href="#ZD4">D4</a></p>
+                    <p><a href="#ZE5">E5</a></p>
+                    <p><a href="#ZF6">F6</a></p>
+                    <p><a href="#ZG7">G7</a></p>
+                    <p><a href="#ZH8">H8</a></p>
+                    <p><a href="#ZI9">I9</a></p>
+               </div>
+               <div class="column" style="background-color:#aaa;">
+                    <p><a href="#ZJ10">J10</a></p>
+                    <p><a href="#ZK11">K11</a></p>
+                    <p><a href="#ZL12">L12</a></p>
+                    <p><a href="#ZM13">M13</a></p>
+                    <p><a href="#ZN14">N14</a></p>
+                    <p><a href="#ZO15">O15</a></p>
+                    <p><a href="#ZP16">P16</a></p>
+                    <p><a href="#ZQ17">Q17</a></p>
+                    <p><a href="#ZR18">R18</a></p>
+               </div>
+               <div class="column" style="background-color:#bbb;">
+                    <p><a href="#ZS19">S19</a></p>
+                    <p><a href="#ZT20">T20</a></p>
+                    <p><a href="#ZU21">U21</a></p>
+                    <p><a href="#ZV22">V22</a></p>
+                    <p><a href="#ZW23">W23</a></p>
+                    <p><a href="#ZX24">X24</a></p>
+                    <p><a href="#ZY25">Y25</a></p>
+                    <p><a href="#ZZ26">Z26</a></p>
+                    <p><a href="#ZExtra">Extra</a></p>
+               </div>
+          </div>
+          <article>
+               <h2 id="ZA1">A1</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZB2">B2</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZC3">C3</h2>
+               <h3>
+               </h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Comment2Code & Code2Comment:</h4>
+                    <p> 1. Comment: Ctrl +/ (This slash must not be from number key)
+                    </p>
+                    <p>2. Converting Comment to code: Ctrl+ /(backward slash)</p>
+                    <h4>Copy:
+                    </h4>
+                    <p>1. Copy lines down: Shift+Alt+Downarrow</p>
+                    <p>2. Copy lines up: Shift+Alt+UpArrow</p>
+                    <h4>Cusor:
+
+                    </h4>
+                    <p>1. Cursor at the end of every Selected lines: Select the line first and then Alt‍‍ ‍+ Shift‍‍‍‌‌
+                         + I (Pressing Home Twice will lead to the start of every line, pressing END lead to end of
+                         every line)
+
+                    </p>
+                    <p> 2. Cursor at the first line: Put cursor at the end of line (Alt+Shift+I) and use Home Key to
+                         bring it at the beginning of the line.</p>
+                    <p> 3. Navigate back to previous cursor point: Alt+Left Arrow</p>
+                    <p> 4. Navigate forward (from back cursor point) to next cursor point: Alt+ Right Arrow</p>
+                    <p></p>
+                    <p></p>
+                    <h4>Command Pallete:
+                         </h4>
+                    <p>ShortcutKey to Open Command Pallate: F1</p>
+                    <h4></h4>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZD4">D4</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZE5">E5</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZF6">F6</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Find:
+                    </h4>
+                    <p>Matching Pair of a tag: Go to Command Palate and type matching pair. (User Key Binding Assigned
+                         by me: ctrl+m ctrl +p)</p>
+                    <p></p>
+                    <h4>F&R1:</h4>
+                    <p>Find: &lt;a href="#Z[A-Z][0-9]+">([A-Z][0-9]+) &lt;/a>
+           
+                    <p>Replace:&lt;a href="#Z$1"&gt;$1&lt;/a>
+                    <h4>F&R2:</h4>
+                    <p>Find:&lt;a href="#.*">.*&lt;/a>
+                    <p>Replace: &lt;a href="#Z$1">$1&lt;/a>
+                  
+                    <h4>F&R3: Making the text bold that lies between para tag and semicolon(:)</h4>
+                    <p>Find: (&lt;p>)(.*?:)</p>
+                    <p>Replace: &lt;p>&lt;b>$2&lt;/b></p>
+                    
+                         
+                    <p>Explanation:         (&lt;p&gt;): matches the starting &lt;p&gt; tag.
+                    (.*?:): matches any text until the first occurrence of a colon (:) and the colon itself, and captures this as the second group.
+                    &lt;p&gt;&lt;b&gt;$2&lt;/b&gt;: replaces the starting &lt;p&gt; tag with a new &lt;p&gt;&lt;b&gt; tag, inserts the captured text from the second group with $2, and adds a closing &lt;/b&gt; tag after the text.</p>
+
+                    <h4>F&R4:</h4>
+                    
+                    <p>Find: [०-९]+\.</p>
+                    <p>Replace:  £$&.</p>
+                    <p>Explanation:This will insert the pound symbol before the matched Devanagari script number. The $& in the replace string inserts the matched text (i.e., the number and dot). </p>
+               
+                    <h4>F&R5: REPLACEMENT IN LINES ENDING WITH COMMA
+
+                    </h4>
+                         <p>Find: ,$</p>
+                         <p>Replace: &lt;br&gt;</p>
+                         <p>Explanation: This will replace the matched (,) comma character with the &lt;br&gt; tag.
+                         </p>
+
+                         <h4>F&R6:</h4>
+                         <p>Find: ^\(</p>
+                         <p>Replace: </p>   
+
+                         <h4>F&R7:</h4>
+                         <p>Find: .*word.* (type the word you want to search/replace)</p>
+                         <p>Replace: </p>     
+                         
+                         <h4>F&R8: Joining Lines</h4>
+                         <p>Find: \r\n</p>
+                         <p>Replace:" "(use double spaces without quotes ) </p>
+
+                         <h4>F&R9: Disintegrating the Joined lines</h4>
+                         <p>Find: " " (use double spaces without quotes</p>
+                         <p>Replace: \r\n </p> 
+
+                         <h4>F&R10:INSERTING UNDERLINE TAG WHEREVER THERE ARE BOLD TEXT:</h4>
+                         <p>Find:(&lt;b&gt;)(.*?)(&lt;\/b&gt;) </p>
+                         <p>Replace: $1<u>$2</u>$3 </p> 
+                         
+                         <h4>F&R11: Inserting uderline tag after 4 characters from bold tag</h4>
+                         <p>Find:(&lt;b&gt;[^&lt;]{4})([^&lt;]*[a-zA-Z]+[^&lt;]*)(&lt;\/b&gt;) </p>
+                         <p>Replace: $1<u>$2</u>$3 </p>
+
+                         <h4>F&R12:Find and Replace of Manual Devnagari Numbering (having a period)</h4>
+                         <p>Find: (([\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] ))</p>
+                         <p>Replace: $1&lt;u&gt; </p> 
+                              <p>Bonus:For  Selecting all numbering: (([\u0967-\u096F]+\. )|([\u0967-\u096F]+[.)] )) <br>
+For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] ))<br>
+ For non-Devanagari Script: ^\d+\. [here, d denotes digit followed by period.] </p>
+                         
+ <h4>F&R13:</h4>
+ <p>Find: ^[०-९\.]+</p>
+ <p>Replace: </p>                 
+
+
+
+
+               </div>
+               <h2 id="ZG7">G7</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Go:
+
+                    </h4>
+                    <p> 1. Go to specific line: Command palatte and press Ctrl G</p>
+                    <p></p>
+          
+               </div>
+               <h2 id="ZH8">H8</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZI9">I9</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Insert
+                         </h4>
+                    <p>Date and Time: Ctrl+D +T (My Key Binding)[default was Ctrl+ Shift+I]
+                        
+                    </p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZJ10">J10</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZK11">K11</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZL12">L12</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZM13">M13</h2>
+               <h3>Move:
+               </h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p> 1. Moving line down: Alt+ downarrow
+                    </p>
+                    <p> 2. Moving line up: Alt+ uparrow</p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZN14">N14</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Navigation</h4>
+                    <p> 3. Navigate back to previous cursor point: Alt+Left Arrow</p>
+                    <p> 4. Navigate forward (from back cursor point) to next cursor point: Alt+ Right Arrow</p>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZO15">O15</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Open:
+
+                    </h4>
+                    <p> 1. Opening Closed page: Ctrl+Shift+T</p>
+                    <p>2. Opening Recently Files & Folder: Ctrl+R</p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZP16">P16</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZQ17">Q17</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZR18">R18</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Rename
+
+                    </h4>
+                    <p>Automatically renaming matching pair tag: Select the tag- Click F2 (Rename)+Click Enter. [This
+                         will automatically rename both opening and closing tag of their match]</p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZS19">S19</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Select:
+                    </h4>
+                    <p>1. Selecting content within a tag: Balance Outward.
+
+                    </p>
+                    <p> 2. Expand the region of Selection: Ctrl+ W (Also: Shift+Alt+Right Arrow)
+
+                    </p>
+                    <p>3. Selecting all occurrence: ctrl+Shift+L
+
+                    </p>
+                    <p>4. Selecting multiple occurence: Ctrl+D (Selecting the text at cursor and its multiple
+                         occurrrence)
+
+                    </p>
+                    <p> 5. Wishful selection: Alt+Click (Multiple Cursor)
+
+                    </p>
+                    <p> 6.To add cursors to all the occurrences of a highlighted word.
+                         Ctrl+Shift+L</p>
+                    <h4>Suggestion:
+                    </h4>
+                    <p>Trigerring Suggestion Options: Ctrl+ Space</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZT20">T20</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Tag</h4>
+                   <p>1. Including Tag as Character of text (not mark up language):  &amp; is generated in browser by using &amp;amp; or by simply using &</p> 
+                    <p>2. For eg: &lt;strong&gt;  can be generated in text  by using &amp;lt;strong&amp;gt; </p>                                                  
+                                                                                 
+                    <p>3. Further  &amp;lt;strong&amp;gt; is generated in text by using &amp;amp;lt;strong&amp;amp;gt;   </p>
+                    <p>4. &amp;amp;lt;strong&amp;amp;gt; is generated as text in browser using &amp;amp;amp;lt;strong&amp;amp;amp;gt; </p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZU21">U21</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4>Unsolved Problems</h4>
+                    <p>1.     Word doesn't accept html padding and tab leader and margin</p>
+                    <p>2. Creation of Nested Ordered List where 1st sub item is in same line with its item in the form:
+                         1.	Shiva
+                         2.	Ram:  	2.1 Sita
+                                        2.2	Laxmi
+                                        2.3	Rama
+                         3.	Hari
+                    </p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZV22">V22</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZW23">W23</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZX24">X24</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZY25">Y25</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZZ26">Z26</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h2 id="ZExtra">Extra</h2>
+               <h3></h3>
+               <div class="column" style="background-color:#bbb;">
+                    <h4></h4>
+                    <p></p>
+                    <p></p>
+                    <h4></h4>
+                    <p></p>
+               </div>
+               <h3>Sample</h3>
+               <div class="column" style="background-color:#aaa;">
+                    <h3>नमूनाको लागि </h3>
+                    <p></p>
+                    <p>!लेख्नुहोस् <a href="#fn7" aria-describedby="footnote-label" id="fn8"></a>!निरन्तरलेख्नुहोस्</p>
+               </div>
+               <div class="column" style="background-color:#aaa;">
+                    <h3 id="Extra"> Only for Sample </h3>
+                    <p>xyz <a href="#fn9" aria-describedby="footnote-label" id="fn10"></a>
+                         Continue your text
+                         here</p>
+                    <p>xyz <a href="#fn11" aria-describedby="footnote-label" id="fn12"></a> Continue your text here</p>
+               </div>
+     </div>
+     </article>
+     <footer>
+          <h2 class="visually-hidden" id="footnote-label">Endnotes</h2>
+          <h3></h3>
+          <ol>
+               <li id="fn7">Type links the specific section of another webpage. <a
+                         href="https://shivaprasadacharya.github.io/BarSyllables.git.io/#EVL" target="_blank">See
+                         EVL</a> <a href="#fn8" aria-label="Back to content">[&#x21A9;]</a></li>
+               <li id="fn9">!TypeHere: HLA ROR<a href="" target="_blank">!See ROR</a> <a href="#fn10"
+                         aria-label="Back to content">[&#x21A9;]</a>
+               </li>
+               <li id="fn11">!TypeHere:safety valve<a href="" target="_blank">!See safety valve</a> <a href="#fn12"
+                         aria-label="Back to content">[&#x21A9;]</a>
+               </li>
+          </ol>
+     </footer>
+     <p id="developedby"><u><b>Developed By:</b></u><br> Debaka Timilsina (M.A, M.Ed; LL.B) <br> Shiva Prasad Acharya
+          (M.Sc.; LL.M; Tantraacharya)<br> श्रीमहाशिरात्री, २०७९ <a id="BOTTOM"></a></p>
+     <div class="link-container">
+          <a href="#TOP">&#x25B2</a><BR><BR><BR>
+          <a href="#BOTTOM">&#x25BC</a>
+     </div>
+     <p>This is a <strong>&lt;strong&gt;</strong> tag.</p>
+
+</body>
+
+</html>
+<!-- THIS IS FOR GENERATION OF TWO COLUMNS, THEIR HEADING AND THEIR CONTENT
+      <div class="column"
+           style="background-color:#aaa;">
+        <h3><a id=""
+             href="#BOTTOM">&#x25BC</a><a id=""
+             href="#TOP">&#x25B2</a></h3>
+        <p></p>
+      </div>
+      <div class="column"
+           style="background-color:#bbb;">
+        <h3><a id=""
+             href="#BOTTOM">&#x25BC</a><a id=""
+             href="#TOP">&#x25B2</a></h3>
+        <p></p>
+      </div>
+    </div>-->
+<!--
+ <a href="#fn" aria-describedby="footnote-label" id="fn"></a>
+<li id="fn">!TypeHere:<a href="" target="_blank">!See:-</a> <a href="#fn" aria-label="Back to content">[&#x21A9;]</a></li>     
+-->
+upgraded on 20230225-1717
