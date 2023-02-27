@@ -228,6 +228,8 @@
                          bring it at the beginning of the line.</p>
                     <p> 3. Navigate back to previous cursor point: Alt+Left Arrow</p>
                     <p> 4. Navigate forward (from back cursor point) to next cursor point: Alt+ Right Arrow</p>
+                    <p>7. To add cursor to all occurrences of search word: Alt+Enter (for multiple cursor in the highlighted text)(नोटः highlighted text and selected text are different thing.)</p>
+
                     <p></p>
                     <p></p>
                     <h4>Command Pallete:
@@ -318,7 +320,7 @@
                          <p>Replace: $1<u>$2</u>$3 </p>
 
                          <h4>F&R12:Find and Replace of Manual Devnagari Numbering (having a period)</h4>
-                         <p>Find: (([\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] ))</p>
+                         <p>Find: (([\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] )) OR [०-९\.]</p>
                          <p>Replace: $1&lt;u&gt; </p> 
                               <p>Bonus:For  Selecting all numbering: (([\u0967-\u096F]+\. )|([\u0967-\u096F]+[.)] )) <br>
 For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] ))<br>
@@ -328,9 +330,37 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
  <p>Find: ^[०-९\.]+</p>
  <p>Replace: </p>                 
 
+ <h4>F&R14: Finding lines that begin with alphabets (not digits)</h4>
+ <p>Find: ^[a-zA-Z]</p>
+ <p>Replace: </p>  
 
+ <h4>F&R15: Finding lines that begin with devnagari script</h4>
+ <p>Find:^[ऀ-ॿ]</p>
+ <p>Replace: </p> 
 
+ <h4>F&R15: Finding lines that begin with alphabet ignoring empty spaces before them</h4>
+ <p>Find:^\s*[a-zA-Z]</p>
+ <p>Replace:  $&  </p>
+  <p>Trouble: It select the first letter of the word  and separate it from that word after replacement</p>
 
+  <h4>F&R16:</h4>
+  <p>Find:\w+)\s+(\w+)</p>
+  <p>Replace:$2, $1</p>
+  <p>Explanation :Here's an explanation of each term used in the regular expression (\w+)\s+(\w+): <br> <br>
+     (: This character starts a capture group. It tells the regular expression engine to "capture" the text that matches the pattern inside the parentheses.<br>
+     \w+: This pattern matches one or more "word" characters. Word characters include letters (both uppercase and lowercase), numbers, and underscores.<br>
+     ): This character ends the capture group. It tells the regular expression engine to stop capturing text.<br>
+     \s+: This pattern matches one or more whitespace characters. Whitespace characters include spaces, tabs, and line breaks.<br>
+     (: This character starts a second capture group.<br>
+     \w+: This pattern matches one or more word characters.<br>
+     ): This character ends the second capture group.<br>
+     So putting it all together, the regular expression (\w+)\s+(\w+) matches two words separated by whitespace, and captures each word in its own capture group. The first word is captured by the first capture group, and the second word is captured by the second capture group.<br>
+     For example, if you applied this regular expression to the string "John Smith", the first capture group would capture "John", and the second capture group would capture "Smith". You can then use these captured words in the replace string to rearrange the order of the text, as I showed in my previous answer.<br>
+     </p>
+ 
+ <h4>F&R15: Finding lines that begin with alphabet ignoring empty spaces before them</h4>
+ <p>Find:^\s*^[ऀ-ॿ]</p>
+ <p>Replace: </p>
                </div>
                <h2 id="ZG7">G7</h2>
                <h3></h3>
@@ -476,6 +506,11 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
                     </p>
                     <p> 6.To add cursors to all the occurrences of a highlighted word.
                          Ctrl+Shift+L</p>
+                         <p>7. To add cursor to all occurrences of search word: Enter(for selecting first highlighted word) and Alt+Enter</p>
+                    <p>8. Selecting/Highlighting bracket (: use \( in find box</p>
+                    <p>9. Selecting Content within a tag: Put Cursor on opening and closing tag and then use Ctrl+ Shift+\ <br> Next Method: Alt+Shift+ Right Arrow (before that put cursor on the tag to select along with tag and put cursor just outside tag to select without tag)</p>
+                    <p>Selecting text that is at the end of the line: $ <br> For example to select : (colon) that appears at the end use :$ in the find section. And then use Alt+Enter for selection of the highlighted text.</p>
+                    <p>Selecting the lines that do not contain the word (say system): In find box write: ^(?!.*system).*$ and then use Alt+Enter to put cursor on the higlighted line. (^ denotes beginning and $ denotes end of line.</p>
                     <h4>Suggestion:
                     </h4>
                     <p>Trigerring Suggestion Options: Ctrl+ Space</p>
@@ -627,4 +662,9 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
  <a href="#fn" aria-describedby="footnote-label" id="fn"></a>
 <li id="fn">!TypeHere:<a href="" target="_blank">!See:-</a> <a href="#fn" aria-label="Back to content">[&#x21A9;]</a></li>     
 -->
-upgraded on 20230225-1717
+<!--USE THIS SCRIPT TO ARRANGE THE ENDNOTES IN ORDER OF MAINTEXT. 
+The thing to be noted here is that when the script is active hyperlink are dysfunctional. So the script has to be activated only if we want to copy or print the content. The script starts here: 
+  <script>window.onload = function() { var footnotes = document.querySelectorAll('[aria-describedby="footnote-label"]'); var newOrderedList = document.createElement('ol'); for (var i = 0; i < footnotes.length; i++) { var footnoteId = footnotes[i].getAttribute('href').substring(1); var footnoteElement = document.getElementById(footnoteId); var newListItem = document.createElement('li'); newListItem.innerHTML = footnoteElement.innerHTML; newOrderedList.appendChild(newListItem); } var footer = document.querySelector('footer'); footer.innerHTML = ''; footer.appendChild(newOrderedList); } </script>-->
+<!-- successful sample not to be deleted --> <!-- text with endnotes containing hyperlinks and return back key -->
+<!-- UPGRADED WITH HYPERLINK AND RETURN BACK KEY. Also way of linking a particular section of another webpage is also shown in endnote. -->
+<!-- pushed on 20230227-1743  -->
