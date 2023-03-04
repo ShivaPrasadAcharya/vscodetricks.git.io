@@ -2,13 +2,8 @@
 <html>
 
 <head>
-     <script type="text/javascript"
-          src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HBaIdMFthcpTXQzmiV0NSVzQpAMSkIRSaF0fXxNIalT8Xi9f1BbqLRvPGcXuzLunNzPN-HEvc5h0OaMFuHTBK_-kLjZf8YfP5Kpsh-bDPRE"
-          charset="UTF-8"></script>
-     <script type="text/javascript"
-          src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=q4_fBr5dC1xRMlBlNpT_DvmBEpTc_7Aw1Oonpwhf4bce7wlUp4GkXK6JlRx0aP0P1JjmYBaVZOQ0x7MDBDaztgCpnQD-MS-ylPicOPp22mY"
-          charset="UTF-8"></script>
-     <title>sample1</title>
+
+     <title>tricks</title>
      <style>
           .row {
                display: flex;
@@ -141,6 +136,40 @@
                margin-right: 20px;
                font-size: larger;
           }
+      
+
+            
+		/* Use flexbox to align the list items horizontally */
+		.nestedorderedlist ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.nestedorderedlist li {
+			flex-basis: calc(100% / 3);
+			box-sizing: border-box;
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		/* Add some extra styles to the nested list */
+		.nestedorderedlist li ol {
+			padding-left: 20px;
+			margin-top: 10px;
+		}
+
+		.nestedorderedlist li ol li {
+			flex-basis: auto;
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+
+         
      </style>
 </head>
 
@@ -358,9 +387,31 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
      For example, if you applied this regular expression to the string "John Smith", the first capture group would capture "John", and the second capture group would capture "Smith". You can then use these captured words in the replace string to rearrange the order of the text, as I showed in my previous answer.<br>
      </p>
  
- <h4>F&R15: Finding lines that begin with alphabet ignoring empty spaces before them</h4>
+ <h4>F&R17: Finding lines that begin with alphabet ignoring empty spaces before them</h4>
  <p>Find:^\s*^[ऀ-ॿ]</p>
  <p>Replace: </p>
+
+ <h4>F&R18: Mathing the content</h4>
+ <p>Find:.* (for content within line)</p>
+ <p>Find:(.|\n)* (for content within multiple lines) </p>
+ <p>Replace: </p> 
+ <p>Explanation: 
+          <p>In VS Code, the regular expression "." matches any character except for a line break, which means that ".*" represents the content of a single line.</p>
+     
+          <p>To match the contents of multiple lines, you can use the regular expression "(.|\n)*". This expression matches any character, including line breaks, any number of times (including zero).</p>
+     
+          <p>Alternatively, you can also use the "s" flag in combination with the "." character to match any character.</p>
+     
+          <p>The regular expression [\s\S] matches any whitespace character (\s) or any non-whitespace character (\S). By using the * quantifier, it matches any number (including zero) of characters that are either whitespace or non-whitespace, effectively matching the content of multiple lines.</p>
+   
+      </p>
+
+      
+ <h4>F&R18: Matching the content</h4>
+ <p>Find:.* (for content within line)</p>
+ <p>Find:(.|\n)* (for content within multiple lines) </p>
+ <p>Replace: </p> 
+ <p>Explanation: Type in the regular expression ^((?!.*\bcharacter\b.*\bcharacter\b.*\bcharacter\b).)*$ in the search bar. This will search for paragraphs that do not contain the word "character" three times.<br>In the "Find" field, type (.|\n)+\bcharacter\b(.|\n)+\bcharacter\b(.|\n)+\bcharacter\b(.|\n)*$. This will match any paragraph that contains the word "character" three times.</p>
                </div>
                <h2 id="ZG7">G7</h2>
                <h3></h3>
@@ -450,8 +501,45 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
                     </h4>
                     <p> 1. Opening Closed page: Ctrl+Shift+T</p>
                     <p>2. Opening Recently Files & Folder: Ctrl+R</p>
-                    <h4></h4>
-                    <p></p>
+
+                    <div class="nestedorderedlist">
+
+
+                   
+                    <h4 >Ordered list</h4>
+                    <p>1. Nested Ordered list in tabular form: 
+                         
+
+
+	<ul>
+		<li>Item 1
+			<ol>
+				<li>Sub-item 1</li>
+				<li>Sub-item 2</li>
+				<li>Sub-item 3</li>
+			</ol>
+		</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4
+			<ol>
+				<li>Sub-item 1</li>
+				<li>Sub-item 2</li>
+				<li>Sub-item 3</li>
+				<li>Sub-item 4</li>
+			</ol>
+		</li>
+		<li>Item 5</li>
+		<li>Item 6
+			<ol>
+				<li>Sub-item 1</li>
+				<li>Sub-item 2</li>
+			</ol>
+		</li>
+	</ul>
+
+</div>
+                    </p>
                </div>
                <h2 id="ZP16">P16</h2>
                <h3></h3>
@@ -507,10 +595,22 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
                     <p> 6.To add cursors to all the occurrences of a highlighted word.
                          Ctrl+Shift+L</p>
                          <p>7. To add cursor to all occurrences of search word: Enter(for selecting first highlighted word) and Alt+Enter</p>
-                    <p>8. Selecting/Highlighting bracket (: use \( in find box</p>
+                    <p>8. Selecting/Highlighting bracket (): use \(\) in find box</p>
                     <p>9. Selecting Content within a tag: Put Cursor on opening and closing tag and then use Ctrl+ Shift+\ <br> Next Method: Alt+Shift+ Right Arrow (before that put cursor on the tag to select along with tag and put cursor just outside tag to select without tag)</p>
-                    <p>Selecting text that is at the end of the line: $ <br> For example to select : (colon) that appears at the end use :$ in the find section. And then use Alt+Enter for selection of the highlighted text.</p>
-                    <p>Selecting the lines that do not contain the word (say system): In find box write: ^(?!.*system).*$ and then use Alt+Enter to put cursor on the higlighted line. (^ denotes beginning and $ denotes end of line.</p>
+                    <p>10. Selecting text that is at the end of the line: $ <br> For example to select : (colon) that appears at the end use :$ in the find section. And then use Alt+Enter for selection of the highlighted text.</p>
+                    <p>11. Selecting the lines that do not contain the word (say system): In find box write: ^(?!.*system).*$ and then use Alt+Enter to put cursor on the higlighted line. ^ denotes beginning and $ denotes end of line.</p>
+                    <p>12. Selecting content in  between two tags:Type &lt;p&gt;(.*?)&lt;\/p&gt; in the search bar.<br>
+                         Press Enter to find the first occurrence of the pattern.<br>
+                         The text between the &lt;p&gt; and &lt;/p&gt; tags will be highlighted. <br>
+                         <p>Note: Note that the backslashes before the forward slashes and angle brackets are used to escape them, since they have special meanings in regular expressions. Also note that .*? is used instead of .* to ensure non-greedy matching, which means that the regular expression engine will match as few characters as possible to satisfy the pattern. This is important when there are multiple occurrences of the pattern in the text, as it ensures that each occurrence is matched separately rather than all of them being matched together.</p>
+                    <p><b>13.Greedy Selection within a line:</b>start.*end</p>
+                    <p><b>14.Non Greedy Selection within a line:</b>start(*?)end</p>
+                    <p><b>15.Non Greedy Selection within multiple lines:</b>start([\s\S]*?)end</p>
+                    <p><b>16.Non-Greedy Selection within a line:</b>start.*?end
+                    </p>
+                    <p>Note: Greedy Selection matches longest content while non-greedy selection matches shortest cotent.</p>
+                    <p><b>17. Multiple Word Selection:</b>type: word1|word2|word3 in find box. And then use Control click any highlighted word to make multiple selection.</p>
+                    <p><b><u>Note:</u></b>  while entering closing tag in find box forward slash should be preseved by using backward slash: eg: &lt;p&gt;(.*?)&lt;\/p&gt;</p>
                     <h4>Suggestion:
                     </h4>
                     <p>Trigerring Suggestion Options: Ctrl+ Space</p>
@@ -544,6 +644,7 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
                                         2.3	Rama
                          3.	Hari
                     </p>
+                    3. Getting (ङ), (च), (छ) etc while using devnagari numbering. (In Fontasy Himali Font. (ङ्ग), (द्द) etc has been obtained. (क)  (घ) is ok.)
                     <h4></h4>
                     <p></p>
                </div>
@@ -667,4 +768,4 @@ The thing to be noted here is that when the script is active hyperlink are dysfu
   <script>window.onload = function() { var footnotes = document.querySelectorAll('[aria-describedby="footnote-label"]'); var newOrderedList = document.createElement('ol'); for (var i = 0; i < footnotes.length; i++) { var footnoteId = footnotes[i].getAttribute('href').substring(1); var footnoteElement = document.getElementById(footnoteId); var newListItem = document.createElement('li'); newListItem.innerHTML = footnoteElement.innerHTML; newOrderedList.appendChild(newListItem); } var footer = document.querySelector('footer'); footer.innerHTML = ''; footer.appendChild(newOrderedList); } </script>-->
 <!-- successful sample not to be deleted --> <!-- text with endnotes containing hyperlinks and return back key -->
 <!-- UPGRADED WITH HYPERLINK AND RETURN BACK KEY. Also way of linking a particular section of another webpage is also shown in endnote. -->
-<!-- pushed on 20230227-1743  -->
+<!-- pushed on 20230304-1309  -->
