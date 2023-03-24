@@ -122,7 +122,7 @@
           /* Style for the link container */
           .link-container {
                position: fixed;
-               bottom: 50%;
+               bottom: 0%;
                left: 0;
                right: 0;
                text-align: bottom;
@@ -169,12 +169,15 @@
 			margin: 0;
 		}
 
-         
+   code {
+     font-family: Arial, Helvetica, sans-serif;
+     word-wrap: break-word;
+   }      
      </style>
 </head>
 
-<body> <BR>
-     <center>श्रीसरस्वत्यै नमः <a id="TOP"></a></center><BR><BR> <a
+<body> <br>
+     <center>श्रीसरस्वत्यै नमः <a id="TOP"></a></center><br><br> <a
           href="https://shivaprasadacharya.github.io/sample1.git.io/" target="_blank">Double Column</a>
      <div class="hyperlink">
           <h2 id="">Content</h2>
@@ -412,6 +415,30 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
  <p>Find:(.|\n)* (for content within multiple lines) </p>
  <p>Replace: </p> 
  <p>Explanation: Type in the regular expression ^((?!.*\bcharacter\b.*\bcharacter\b.*\bcharacter\b).)*$ in the search bar. This will search for paragraphs that do not contain the word "character" three times.<br>In the "Find" field, type (.|\n)+\bcharacter\b(.|\n)+\bcharacter\b(.|\n)+\bcharacter\b(.|\n)*$. This will match any paragraph that contains the word "character" three times.</p>
+               
+              
+
+                   <h4>F&R19: Matching the digit</h4>
+                   <p>In the "Find" input box, enter ol start="(\d+)"<br>
+                    The (\d+) is a capture group that matches any number of digits between the quotes and captures the matched value.<br>
+                    In the "Replace" input box, enter ol class="first-ol" start="$1"<br>
+                    The $1 is a backreference to the first capture group, which preserves the matched value from the "Find" input box.</p>
+                    
+                    <h4>F&R20: Matching the text</h4>
+                    <pre>
+                         <code>"Find": &lt;p&gt;([^&lt;]*)&lt;\/p&gt;.<br>
+                         "Replace": &lt;p&gt; $1&lt;p&gt;.<br>
+                         The ([^&lt;]*) is a capture group that matches any sequence of characters that are not the opening bracket of a new tag, and captures the matched value.<br>
+                         The &lt;\/p&gt; matches the closing tag of the paragraph element.<br>
+                         
+                         The $1 is a backreference to the first capture group, which preserves the matched value from the "Find" input box.</code>
+                         </pre>.
+                    
+                    <h4>FIND LINES THAT END WITH A COLON (:)
+                     IN VS CODE <br>
+                    you can use the regular expression :$. <br>
+                   : - This matches a colon character. <br>
+                   $ - This matches the end of a line</h4>
                </div>
                <h2 id="ZG7">G7</h2>
                <h3></h3>
@@ -611,6 +638,10 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
                     <p>Note: Greedy Selection matches longest content while non-greedy selection matches shortest cotent.</p>
                     <p><b>17. Multiple Word Selection:</b>type: word1|word2|word3 in find box. And then use Control click any highlighted word to make multiple selection.</p>
                     <p><b><u>Note:</u></b>  while entering closing tag in find box forward slash should be preseved by using backward slash: eg: &lt;p&gt;(.*?)&lt;\/p&gt;</p>
+                    <p><b>Special Selection:</b></p>
+                    <p><b>Question:</b> select only those content in VS Code between  words:  'start' and 'end' such that the selection which contains words: 'between' is avoided</p>
+                    <p><b>Answer:</b>start(?!.between).?end</p>
+                    <p><b>Answer:</b>(?s)start(?!.between).?end</p>
                     <h4>Suggestion:
                     </h4>
                     <p>Trigerring Suggestion Options: Ctrl+ Space</p>
@@ -735,7 +766,7 @@ For Selecting initial numbering: ((^[\u0967-\u096F]+\. )|(^[\u0967-\u096F]+[.)] 
      <p id="developedby"><u><b>Developed By:</b></u><br> Debaka Timilsina (M.A, M.Ed; LL.B) <br> Shiva Prasad Acharya
           (M.Sc.; LL.M; Tantraacharya)<br> श्रीमहाशिरात्री, २०७९ <a id="BOTTOM"></a></p>
      <div class="link-container">
-          <a href="#TOP">&#x25B2</a><BR><BR><BR>
+          <a href="#TOP">&#x25B2</a><br>
           <a href="#BOTTOM">&#x25BC</a>
      </div>
      <p>This is a <strong>&lt;strong&gt;</strong> tag.</p>
@@ -768,4 +799,4 @@ The thing to be noted here is that when the script is active hyperlink are dysfu
   <script>window.onload = function() { var footnotes = document.querySelectorAll('[aria-describedby="footnote-label"]'); var newOrderedList = document.createElement('ol'); for (var i = 0; i < footnotes.length; i++) { var footnoteId = footnotes[i].getAttribute('href').substring(1); var footnoteElement = document.getElementById(footnoteId); var newListItem = document.createElement('li'); newListItem.innerHTML = footnoteElement.innerHTML; newOrderedList.appendChild(newListItem); } var footer = document.querySelector('footer'); footer.innerHTML = ''; footer.appendChild(newOrderedList); } </script>-->
 <!-- successful sample not to be deleted --> <!-- text with endnotes containing hyperlinks and return back key -->
 <!-- UPGRADED WITH HYPERLINK AND RETURN BACK KEY. Also way of linking a particular section of another webpage is also shown in endnote. -->
-<!-- pushed on 20230304-1309  -->
+<!--  pushed on 2202303241246   -->
